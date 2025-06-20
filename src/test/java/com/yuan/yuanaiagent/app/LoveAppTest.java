@@ -64,4 +64,20 @@ class LoveAppTest {
         String answer =  loveApp.doChatWithRagAdvisorPGVector(message, chatId);
         Assertions.assertNotNull(answer);
     }
+
+    @Test
+    void doChatWithRagByQueryRewriter() {
+        String chatId = UUID.randomUUID().toString();
+        String message = "我已经结婚了，但是婚后关系不太亲密，怎么办？";
+        String answer =  loveApp.doChatWithRagByQueryRewriter(message, chatId);
+        Assertions.assertNotNull(answer);
+    }
+
+    @Test
+    void doChatWithRagFactory() {
+        String chatId = UUID.randomUUID().toString();
+        String message = "我已经结婚了，但是婚后关系不太亲密，怎么办？";
+        String answer =  loveApp.doChatWithRagFactory(message, chatId);
+        Assertions.assertNotNull(answer);
+    }
 }
